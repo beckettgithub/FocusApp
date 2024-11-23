@@ -36,6 +36,11 @@ public class PlanTask: IGUIObject
     {
         throw new NotImplementedException();
     }
+
+    public void UpdateText(string text)
+    {
+        description = text;
+    }
     #endregion 
     public int priority;
     public Color color;

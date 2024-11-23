@@ -17,11 +17,26 @@ public partial class TaskView : ContentView
         InitializeComponent();
         tasksModel = viewModel;
         BindingContext = viewModel;
+        
+        
+
     }
 
     public void OnPlusButtonClicked()
     {
-        tasksModel.AddTask(new PlanTask());
+        PlanTask task = new PlanTask();
+        Frame addTaskFrame = new Frame
+        {
+
+            CornerRadius = 10,
+            Content = Entry taskEntry = new Entry { Placeholder = "enter task here"
+            };
+        
+            
+        }
+        taskEntry.ReturnCommand = task.UpdateText(taskEntry.Text);
+        string newTaskText = taskEntry.Text;
+        task.Text = newTaskText;
     }
 
     public void OnTaskClicked(object sender, EventArgs args)
