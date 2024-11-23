@@ -5,10 +5,16 @@ namespace FocusApp.DataClasses;
 
 public class ToDoList : IGUIObject
 {
+    
     private List<PlanTask> tasks;
     public delegate void OnCompleteTaskDelegate(PlanTask task);
     public event OnCompleteTaskDelegate onCompleteTaskEvent;
     #region GUIObjectImplementation
+
+    public void Initialize()
+    {
+        tasks = new List<PlanTask>();
+    }
     public void Remove()
     {
         throw new NotImplementedException();
