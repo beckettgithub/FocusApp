@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FocusApp.DataClasses;
+using FocusApp.DataInterfaces;
 using FocusApp.ViewModels;
 
 namespace FocusApp.Views;
@@ -23,8 +24,10 @@ public partial class TaskView : ContentView
         tasksModel.AddTask(new PlanTask());
     }
 
-    public void OnTaskClicked(object sender, )
+    public void OnTaskClicked(object sender, EventArgs args)
     {
-        
+        if (sender == null) return;
+        IGUIObject target = sender as IGUIObject;
+        target?.OnClicked();
     }
 }

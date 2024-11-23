@@ -9,7 +9,7 @@ namespace FocusApp.ViewModels;
 public partial class TasksViewModel : ObservableObject
 {
     private ObservableCollection<PlanTask> tasks = new ObservableCollection<PlanTask>();
-
+    
     public TasksViewModel()
     {
         
