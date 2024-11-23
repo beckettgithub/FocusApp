@@ -27,10 +27,6 @@ namespace FocusApp.ViewModels
         {
             AddAllScheduleList();
         }
-        public void AddScheduleItem() 
-        {
-
-        }
         private void AddAllScheduleList()
         {
             var scheduleList = new List<ScheduleModel>();
@@ -75,7 +71,8 @@ namespace FocusApp.ViewModels
             BindDataToScheduleList();
         }
 
-
+        public void AddToSchedule(ScheduleModel model)
+        { ScheduleList.Add(model); }
         public void BindDataToScheduleList()
         {
 
