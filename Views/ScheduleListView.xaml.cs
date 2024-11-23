@@ -1,9 +1,11 @@
 using FocusApp.ViewModels;
+using Microsoft.UI.Xaml;
 using System.Transactions;
+using Windows.Media.Protection.PlayReady;
 
 namespace FocusApp.Views;
 
-public partial class ScheduleListView : ContentPage
+public partial class ScheduleListView : ContentView
 {
 
     private bool _isPanelTranslated;
@@ -20,7 +22,12 @@ public partial class ScheduleListView : ContentPage
         var viewModel = (ScheduleListViewModel)BindingContext;
         viewModel.BindDataToScheduleList();
     }
+    //async void OnClick(object sender, EventArgs args)
+    //{
 
+        //var button = sender as Button;
+        
+    //}
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
         if (_isPanelTranslated)
