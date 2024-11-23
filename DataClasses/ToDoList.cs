@@ -1,14 +1,21 @@
 using System.Collections.Generic;
+using System.Linq;
 using FocusApp.DataInterfaces;
 
 namespace FocusApp.DataClasses;
 
 public class ToDoList : IGUIObject
 {
+    
     private List<PlanTask> tasks;
     public delegate void OnCompleteTaskDelegate(PlanTask task);
     public event OnCompleteTaskDelegate onCompleteTaskEvent;
     #region GUIObjectImplementation
+
+    public void Initialize()
+    {
+        tasks = new List<PlanTask>();
+    }
     public void Remove()
     {
         throw new NotImplementedException();
@@ -27,6 +34,11 @@ public class ToDoList : IGUIObject
     public void OnClicked()
     {
         throw new NotImplementedException();
+    }
+
+    public void OnDragged()
+    {
+        
     }
     #endregion
     public void AddTask(PlanTask task)

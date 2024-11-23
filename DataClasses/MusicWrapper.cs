@@ -2,16 +2,12 @@ using FocusApp.DataInterfaces;
 
 namespace FocusApp.DataClasses;
 
-public class PlanTask: IGUIObject
+public class MusicWrapper : IGUIObject
 {
-    public bool completed;
-    #region GUIObjectImplementation
-    
     public void Initialize()
     {
-        completed = false;
+        throw new NotImplementedException();
     }
-    
     public void Draw()
     {
         throw new NotImplementedException();
@@ -22,22 +18,17 @@ public class PlanTask: IGUIObject
         throw new NotImplementedException();
     }
 
+    public void OnClicked()
+    {
+        throw new NotImplementedException();
+    }
+
     public void OnDragged()
     {
         
     }
-    public void OnClicked()
-    {
-        //toggle completed
-        completed = !completed;
-    }
-
     public void Update()
     {
         throw new NotImplementedException();
     }
-    #endregion 
-    public int priority;
-    public Color color;
-    public string description;
 }

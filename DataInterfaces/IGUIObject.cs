@@ -2,8 +2,10 @@ namespace FocusApp.DataInterfaces;
 
 public interface IGUIObject
 {
-    public abstract void Draw();
-    public abstract void Update();
-    public abstract void Remove();
-    public abstract void OnClicked();
+    public void Initialize();
+    public void Draw();
+    public void Update();
+    public void Remove();
+    public void OnClicked();
+    public void OnDragged();
 }
