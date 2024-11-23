@@ -10,10 +10,9 @@ namespace FocusApp.Models
     public partial class DaysModel : ObservableObject
     {
         public char DayName { get; set; }
-        public DateTime Date { get; set;  }
+        public DateTime Date { get; set; }
 
         [ObservableProperty]
-        private bool isSelected;
-
+        private bool _isSelected;
     }
 }

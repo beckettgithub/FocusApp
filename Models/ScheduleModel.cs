@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace FocusApp.Models
 {
-    public partial class ScheduleModel
+    namespace FocusApp.Models
     {
-        public DateTime StartDateTime { get; set; }
-        public DateTime EndDateTime { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Location { get; set; }
-        public Color BackgroundColor { get; set; }
+        public class ScheduleModel
+        {
+            public DateTime StartDateTime { get; set; }
+            public DateTime EndDateTime { get; set; }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public string Location { get; set; }
+            public Color BackgroundColor { get; set; }
+
+        }
     }
 }

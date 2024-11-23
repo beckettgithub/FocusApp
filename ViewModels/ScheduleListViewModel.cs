@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FocusApp.Models;
+using FocusApp.Models.FocusApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
