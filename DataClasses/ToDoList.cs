@@ -18,22 +18,22 @@ public class ToDoList : IGUIObject
     }
     public void Remove()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void Draw()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void Update()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void OnClicked()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void OnDragged()

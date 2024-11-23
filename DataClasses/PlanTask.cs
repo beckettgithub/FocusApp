@@ -39,5 +39,5 @@ public class PlanTask: IGUIObject
     #endregion 
     public int priority;
     public Color color;
-    public string description;
+    public string description = "Task";
 }

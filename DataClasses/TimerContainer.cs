@@ -8,6 +8,10 @@ public class TimerContainer : IGUIObject
 {
     private Timer timer;
 
+    public delegate void OnTimerComplete();
+
+    public event OnTimerComplete OnTimerCompleteEvent;
+
     public void Initialize()
     {
         throw new System.NotImplementedException();
@@ -24,7 +28,7 @@ public class TimerContainer : IGUIObject
 
     public void OnClicked()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void OnDragged()
