@@ -27,6 +27,12 @@ public class TimerContainer : IGUIObject
         throw new NotImplementedException();
     }
 
+    public void OnDragged()
+    {
+        
+    }
+    
+
     public void Remove()
     {
         throw new NotImplementedException();

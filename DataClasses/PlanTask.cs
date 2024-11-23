@@ -9,7 +9,7 @@ public class PlanTask: IGUIObject
     
     public void Initialize()
     {
-        throw new NotImplementedException();
+        completed = false;
     }
     
     public void Draw()
@@ -22,6 +22,10 @@ public class PlanTask: IGUIObject
         throw new NotImplementedException();
     }
 
+    public void OnDragged()
+    {
+        
+    }
     public void OnClicked()
     {
         //toggle completed

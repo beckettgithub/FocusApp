@@ -23,6 +23,10 @@ public class MusicWrapper : IGUIObject
         throw new NotImplementedException();
     }
 
+    public void OnDragged()
+    {
+        
+    }
     public void Update()
     {
         throw new NotImplementedException();

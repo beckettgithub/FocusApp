@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using FocusApp.DataInterfaces;
 
 namespace FocusApp.DataClasses;
@@ -33,6 +34,11 @@ public class ToDoList : IGUIObject
     public void OnClicked()
     {
         throw new NotImplementedException();
+    }
+
+    public void OnDragged()
+    {
+        
     }
     #endregion
     public void AddTask(PlanTask task)

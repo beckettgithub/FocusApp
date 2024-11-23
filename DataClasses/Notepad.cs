@@ -30,6 +30,11 @@ public class Notepad : IGUIObject
     {
         
     }
+
+    public void OnDragged()
+    {
+        
+    }
     #endregion
     private string[] lines;
 

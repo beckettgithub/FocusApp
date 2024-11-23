@@ -7,4 +7,5 @@ public interface IGUIObject
     public void Update();
     public void Remove();
     public void OnClicked();
+    public void OnDragged();
 }
