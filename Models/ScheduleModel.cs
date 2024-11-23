@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FocusApp.Models
 {
-    namespace FocusApp.Models
+    namespace Models
     {
         public class ScheduleModel
         {

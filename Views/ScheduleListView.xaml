@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:FocusApp.ViewModels"
              xmlns:models="clr-namespace:FocusApp.Models"
-             x:DataType="ViewModels:ScheduleListViewModel"
+             x:DataType="viewModels:ScheduleListViewModel"
              Shell.NavBarIsVisible="False"
              x:Class="FocusApp.Views.ScheduleListView"
              Title="ScheduleListView">
@@ -88,25 +88,25 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:DaysModel">
                         <Grid Margin="0,5,0,5">
-                            <Border BackgroundColor="#454952" StrokeThickness="0" 
+                        <Border BackgroundColor="#454952" StrokeThickness="0" 
                                     HeightRequest="40" WidthRequest="40">
-                                <Label FontSize="18" Text="{Binding DayName}" VerticalTextAlignment="Center"
+                            <Label FontSize="18" Text="{Binding DayName}" VerticalTextAlignment="Center"
                                        HorizontalTextAlignment="Center" />
 
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="5" />
-                                </Border.StrokeShape>
-                                <Border.Triggers>
-                                    <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
-                                        <Setter Property="BackgroundColor" Value="Orange" />
-                                    </DataTrigger>
-                                    <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="False">
-                                        <Setter Property="BackgroundColor" Value="#454952" />
-                                    </DataTrigger>
-                                </Border.Triggers>
-                            </Border>
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5" />
+                            </Border.StrokeShape>
+                            <Border.Triggers>
+                                <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
+                                    <Setter Property="BackgroundColor" Value="Orange" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="False">
+                                    <Setter Property="BackgroundColor" Value="#454952" />
+                                </DataTrigger>
+                            </Border.Triggers>
+                        </Border>
 
-                            <Border IsVisible="{Binding IsSelected}"
+                        <Border IsVisible="{Binding IsSelected}"
                                     StrokeThickness="0"
                                     HorizontalOptions="End"
                                     BackgroundColor="White"
@@ -116,15 +116,15 @@
                                     Margin="0,0,-10,0"
                                     >
 
-                            </Border>
+                        </Border>
 
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer 
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer 
                                     CommandParameter="{Binding .}"
                                     Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ScheduleListViewModel}},Path=WeekDaysSelectedCommand}" />
-                            </Grid.GestureRecognizers>
-                        </Grid>
-                    </DataTemplate>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+
                 </CollectionView.ItemTemplate>
             </CollectionView>
 

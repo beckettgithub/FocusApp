@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FocusApp.Models;
-using FocusApp.Models.FocusApp.Models;
+using FocusApp.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,10 +9,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace FocusApp.ViewModels
 {
-    public partial class ScheduleListView : ObservableObject
+    public partial class ScheduleListViewModel : ObservableObject
     {
         public ObservableCollection<DaysModel> WeekDays { get; set; } = new ObservableCollection<DaysModel>();
         public ObservableCollection<ScheduleModel> ScheduleList { get; set; } = new ObservableCollection<ScheduleModel>();
