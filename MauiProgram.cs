@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-
 namespace FocusApp
 {
     public static class MauiProgram
@@ -7,6 +6,7 @@ namespace FocusApp
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+        
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
