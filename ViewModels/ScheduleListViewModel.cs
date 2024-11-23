@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FocusApp.Models;
-using FocusApp.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace FocusApp.ViewModels
 {
     public partial class ScheduleListViewModel : ObservableObject
@@ -27,11 +27,14 @@ namespace FocusApp.ViewModels
         {
             AddAllScheduleList();
         }
+        public void AddScheduleItem() 
+        {
 
+        }
         private void AddAllScheduleList()
         {
-            var scheudleList = new List<ScheduleModel>();
-            scheudleList.Add(new ScheduleModel
+            var scheduleList = new List<ScheduleModel>();
+            scheduleList.Add(new ScheduleModel
             {
                 Title = "Project Setup",
                 Description = "Description 1",
@@ -40,7 +43,7 @@ namespace FocusApp.ViewModels
                 BackgroundColor = Color.FromArgb("#68c6da"),
             });
 
-            scheudleList.Add(new ScheduleModel
+            scheduleList.Add(new ScheduleModel
             {
                 Title = "App Design",
                 Description = "Description 1",
@@ -49,7 +52,7 @@ namespace FocusApp.ViewModels
                 BackgroundColor = Color.FromArgb("#e87a3d"),
             });
 
-            scheudleList.Add(new ScheduleModel
+            scheduleList.Add(new ScheduleModel
             {
                 Title = "App Design",
                 Description = "Description 1",
@@ -58,7 +61,7 @@ namespace FocusApp.ViewModels
                 BackgroundColor = Color.FromArgb("#9a6ead"),
             });
 
-            scheudleList.Add(new ScheduleModel
+            scheduleList.Add(new ScheduleModel
             {
                 Title = "App Design",
                 Description = "Description 1",
@@ -67,7 +70,7 @@ namespace FocusApp.ViewModels
                 BackgroundColor = Color.FromArgb("#eaab43"),
             });
 
-            _allScheduleList.AddRange(scheudleList);
+            _allScheduleList.AddRange(scheduleList);
 
             BindDataToScheduleList();
         }
